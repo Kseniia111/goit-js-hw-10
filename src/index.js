@@ -2,7 +2,7 @@ import { fetchCatByBreed } from './js/cat-api';
 
 import Notiflix from 'notiflix';
 
-const breedSelect = document.querySelector('.breed-seect');
+const breedSelect = document.querySelector('.breed-select');
 const catPicture = document.querySelector('.cat-picture');
 const catDescription = document.querySelector('.cat-description');
 const dataLoader = document.querySelector('.loader');
