@@ -19,7 +19,7 @@ function onChangeSelect(event) {
     console.log('breedId', breedId);
 
     fetchCatByBreed(breedId)
-        .then(breed => renderBreedDescription(breed))
+        .then(breed => renderDescription(breed))
         .catch(error => {
             console.error(error);
             Notiflix.Notify.failure(
