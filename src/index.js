@@ -1,5 +1,6 @@
 import { fetchCatByBreed } from './js/cat-api';
 import { renderDescription } from './js/render-description';
+import { fetchAndBreeds } from './js/fetch-and-breeds';
 import Notiflix from 'notiflix';
 
 const breedSelect = document.querySelector('.breed-select');
@@ -9,7 +10,7 @@ const dataLoader = document.querySelector('.loader');
 
 breedSelect.addEventListener('.change', onChangeSelect)
 
-fetchAndRenderBreeds();
+fetchAndBreeds();
 
 function onChangeSelect(event) {
     dataLoader.classList.remove('invisible');
