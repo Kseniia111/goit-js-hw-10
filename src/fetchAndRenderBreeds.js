@@ -4,7 +4,7 @@ import { renderBreedsSelect } from './renderBreedsSelect';
 
 //Функція, що фетчить дані та на їх основі створює розмітку випадаючого списку (працює відразу після завантаження сторінки)
 const fetchAndRenderBreeds = () => {
-  loaderEl.classList.remove('unvisible');
+  loaderEl.classList.remove('invisible');
   fetchBreeds()
     // .then(breeds => console.log(breeds))
     .then(breeds => renderBreedsSelect(breeds))
@@ -15,8 +15,8 @@ const fetchAndRenderBreeds = () => {
       );
     })
     .finally(() => {
-      loaderEl.classList.add('unvisible');
-      breedSelect.classList.remove('unvisible');
+      loaderEl.classList.add('invisible');
+      breedSelect.classList.remove('invisible');
     });
 };
 

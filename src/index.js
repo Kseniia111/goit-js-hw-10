@@ -15,7 +15,7 @@ fetchAndRenderBreeds();
 
 //Функція, яка виконується при виборі породи кота у списку (подія change на селекті)
 function onChangeSelect(event) {
-  loaderEl.classList.remove('unvisible');
+  loaderEl.classList.remove('invisible');
   divPictEl.innerHTML = '';
   divDescEl.innerHTML = '';
   const breedId = event.target.value;
@@ -29,7 +29,7 @@ function onChangeSelect(event) {
         'Oops! Something went wrong! Try reloading the page!'
       );
     })
-    .finally(() => loaderEl.classList.add('unvisible'));
+    .finally(() => loaderEl.classList.add('invisible'));
 }
 
 export { breedSelect, divPictEl, divDescEl, loaderEl };
