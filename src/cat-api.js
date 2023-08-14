@@ -1,13 +1,13 @@
 const url1 = 'https://api.thecatapi.com/v1/breeds';
 const url2 = 'https://api.thecatapi.com/v1/images';
 
-//Унікальний ключ доступу до Cat API
-const KEY =
+
+const API_KEY =
   'live_GK9iXO1QOnwzaA6MCtqQtXveiujCsN7Onc8JenS5XccP725leZHXcUzfZFBBGB2Q';
 
-//Функція, що фетчить список усіх порід котів
+//All breeds function
 const fetchBreeds = () => {
-  return fetch(`${url1}?api_key=${KEY}`).then(response => {
+  return fetch(`${url1}?api_key=${API_KEY}`).then(response => {
     if (!response.ok) {
       throw new Error(response.status);
     }
@@ -15,9 +15,9 @@ const fetchBreeds = () => {
   });
 };
 
-//Функція, що фетчить опис конкретної породи кота по breedId
+//Single cat function by breedID
 const fetchCatByBreed = breedId => {
-  return fetch(`${url2}/${breedId}?api_key=${KEY}`).then(response => {
+  return fetch(`${url2}/${breedId}?api_key=${API_KEY}`).then(response => {
     if (!response.ok) {
       throw new Error(response.status);
     }
@@ -25,5 +25,4 @@ const fetchCatByBreed = breedId => {
   });
 };
 
-//Іменований експорт функцій
 export { fetchBreeds, fetchCatByBreed };
