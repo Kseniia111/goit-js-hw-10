@@ -13,7 +13,6 @@ breedSelect.addEventListener('change', onChangeSelect);
 
 fetchAndRenderBreeds();
 
-//Функція, яка виконується при виборі породи кота у списку (подія change на селекті)
 function onChangeSelect(event) {
   loaderEl.classList.remove('invisible');
   divPictEl.innerHTML = '';
