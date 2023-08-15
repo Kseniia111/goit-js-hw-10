@@ -1,6 +1,5 @@
 import { divPictEl, divDescEl } from './index';
 
-//Picture and Temper function
 const renderBreedDesc = breed => {
   const markupPicture = `<img class="cat-picture" src="${breed.url}" alt="${breed.id}">`;
   const markupDescript = `<h2 class="cat-info-desc-title">${breed.breeds[0].name}</h2>
